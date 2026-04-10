@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIPMark™ — AI-Powered Marketer: The Complete Playbook for the AI Era</title>
+  <meta name="description" content="The first practical course that teaches MBA students and early-career marketers how to use AI to think, strategise, and execute like a senior marketer. By someone who has trained 350+ students." />
+  <meta property="og:title" content="AIPMark™ — AI-Powered Marketer Playbook" />
+  <meta property="og:description" content="6 modules. 4–5 hours. Become the AI-forward marketer every team is hiring for." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #06060E;
+      --bg2: #0C0C1A;
+      --surface: #111127;
+      --surface2: #16163A;
+      --border: rgba(255,255,255,0.08);
+      --blue: #4F8EF7;
+      --blue-light: #7EB3FF;
+      --gold: #F5C842;
+      --gold-light: #FFE080;
+      --green: #22C55E;
+      --text: #F0F0FF;
+      --muted: #8888AA;
+      --radius: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(6,6,14,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-cta {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .nav-cta:hover { background: var(--blue-light); transform: translateY(-1px); }
+
+    /* ── SECTIONS ── */
+    section { padding: 96px 24px; max-width: 1120px; margin: 0 auto; }
+    .full-bleed { max-width: none; padding: 0; }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(79,142,247,0.12);
+      border: 1px solid rgba(79,142,247,0.25);
+      color: var(--blue-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.03em; line-height: 1.15; }
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 800; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; }
+    h3 { font-size: 1.25rem; font-weight: 700; }
+    p { color: var(--muted); line-height: 1.75; }
+    .text-white { color: var(--text); }
+    .text-center { text-align: center; }
+    .highlight { color: var(--blue-light); }
+    .gold { color: var(--gold); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 600px;
+      background: radial-gradient(ellipse at center, rgba(79,142,247,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .badge-blue { background: rgba(79,142,247,0.15); border: 1px solid rgba(79,142,247,0.3); color: var(--blue-light); }
+    .badge-gold { background: rgba(245,200,66,0.12); border: 1px solid rgba(245,200,66,0.3); color: var(--gold); }
+    .badge-green { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); color: var(--green); }
+
+    .hero-title { max-width: 820px; margin-bottom: 28px; }
+    .hero-title em { font-style: normal; color: var(--blue-light); }
+    .hero-title .line2 { color: var(--gold); }
+
+    .hero-sub {
+      max-width: 640px;
+      font-size: 1.15rem;
+      margin-bottom: 44px;
+      color: rgba(240,240,255,0.7);
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 56px; }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(79,142,247,0.35);
+    }
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,142,247,0.45); }
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 16px 28px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.04); }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat { }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 1.9rem; font-weight: 800; color: var(--text); }
+    .stat-label { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── PROBLEM ── */
+    #problem { background: var(--bg2); max-width: none; }
+    #problem-inner { max-width: 1120px; margin: 0 auto; padding: 96px 24px; }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .mistake-list { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+    .mistake-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .mistake-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
+    .mistake-item h4 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .mistake-item p { font-size: 0.875rem; margin: 0; }
+
+    .truth-box {
+      background: linear-gradient(135deg, rgba(79,142,247,0.1) 0%, rgba(79,142,247,0.04) 100%);
+      border: 1px solid rgba(79,142,247,0.2);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .truth-box h3 { color: var(--blue-light); margin-bottom: 16px; font-size: 1.5rem; }
+    .truth-box p { font-size: 1.05rem; color: rgba(240,240,255,0.8); }
+
+    /* ── CURRICULUM ── */
+    #curriculum { }
+    .curriculum-header { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+    .curriculum-header p { font-size: 1.05rem; margin-top: 16px; }
+    .modules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .module-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .module-card:hover { border-color: rgba(79,142,247,0.3); transform: translateY(-4px); }
+    .module-card:hover::before { opacity: 1; }
+    .module-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+    .module-card h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--text); }
+    .module-card p { font-size: 0.875rem; line-height: 1.65; }
+    .module-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+    .module-tag {
+      background: rgba(79,142,247,0.1);
+      color: var(--blue-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    .bonus-strip {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(245,200,66,0.08), rgba(245,200,66,0.03));
+      border: 1px solid rgba(245,200,66,0.2);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .bonus-icon { font-size: 2.4rem; flex-shrink: 0; }
+    .bonus-text h4 { color: var(--gold); font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .bonus-text p { font-size: 0.9rem; margin: 0; }
+
+    /* ── FOR WHO ── */
+    #forwho { background: var(--bg2); max-width: none; }
+    #forwho-inner { max-width: 1120px; margin: 0 auto; padding: 96px 24px; }
+    .forwho-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .forwho-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .forwho-card h3 { font-size: 1.15rem; margin-bottom: 16px; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .check-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: rgba(240,240,255,0.8);
+    }
+    .check-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+    /* ── INSTRUCTOR ── */
+    #instructor { }
+    .instructor-grid { display: grid; grid-template-columns: auto 1fr; gap: 64px; align-items: center; }
+    .instructor-avatar {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--surface2), var(--surface));
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      flex-shrink: 0;
+    }
+    .instructor-tag { margin-bottom: 12px; }
+    .instructor-content h2 { margin-bottom: 20px; }
+    .instructor-content p { margin-bottom: 20px; font-size: 1.05rem; }
+    .cred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .cred-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .cred-num { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--blue-light); }
+    .cred-desc { font-size: 0.825rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── PRICING ── */
+    #pricing { background: var(--bg2); max-width: none; }
+    #pricing-inner { max-width: 1120px; margin: 0 auto; padding: 96px 24px; }
+    .pricing-header { text-align: center; max-width: 620px; margin: 0 auto 64px; }
+    .pricing-header p { font-size: 1.05rem; margin-top: 16px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 30px;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured {
+      background: linear-gradient(160deg, rgba(79,142,247,0.12), rgba(79,142,247,0.04));
+      border-color: rgba(79,142,247,0.4);
+    }
+    .featured-badge {
+      position: absolute;
+      top: -14px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .pricing-label { font-size: 0.82rem; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+    .pricing-price { font-family: 'Syne', sans-serif; font-size: 2.8rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 4px; }
+    .pricing-price small { font-size: 1.2rem; font-weight: 600; }
+    .pricing-original { font-size: 0.9rem; color: var(--muted); text-decoration: line-through; margin-bottom: 8px; }
+    .pricing-desc { font-size: 0.875rem; color: var(--muted); margin-bottom: 28px; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .pricing-features li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.875rem;
+      color: rgba(240,240,255,0.85);
+    }
+    .pricing-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .btn-pricing {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      display: block;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .btn-pricing:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-pricing-primary { background: var(--blue); color: #fff; box-shadow: 0 4px 20px rgba(79,142,247,0.3); }
+    .btn-pricing-ghost { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .btn-pricing-gold { background: var(--gold); color: #1A1200; box-shadow: 0 4px 20px rgba(245,200,66,0.25); }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .pricing-note strong { color: var(--gold); }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { }
+    .testimonials-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .testimonial-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 14px; letter-spacing: 2px; }
+    .testimonial-text { font-size: 0.9rem; color: rgba(240,240,255,0.8); margin-bottom: 20px; line-height: 1.7; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--surface2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .author-name { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+    .author-role { font-size: 0.78rem; color: var(--muted); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--bg2); max-width: none; }
+    #faq-inner { max-width: 800px; margin: 0 auto; padding: 96px 24px; }
+    .faq-header { text-align: center; margin-bottom: 56px; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 24px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+    }
+    .faq-q:hover { background: rgba(255,255,255,0.03); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.25s; flex-shrink: 0; color: var(--blue); }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 400px; }
+    .faq-a-inner {
+      padding: 0 24px 22px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── FINAL CTA ── */
+    #cta-final { text-align: center; }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(79,142,247,0.12), rgba(79,142,247,0.04));
+      border: 1px solid rgba(79,142,247,0.2);
+      border-radius: 24px;
+      padding: 72px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(ellipse, rgba(245,200,66,0.06) 0%, transparent 70%);
+    }
+    .cta-box h2 { max-width: 600px; margin: 0 auto 20px; }
+    .cta-box p { max-width: 480px; margin: 0 auto 40px; font-size: 1.05rem; }
+    .cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.825rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: underline; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      max-width: 1120px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── COUNTDOWN TIMER ── */
+    .countdown-box {
+      display: inline-flex;
+      gap: 0;
+      background: var(--surface);
+      border: 1px solid rgba(245,200,66,0.25);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+    .countdown-segment {
+      padding: 10px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .countdown-segment:last-child { border-right: none; }
+    .countdown-num { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--gold); display: block; }
+    .countdown-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      section { padding: 72px 20px; }
+      #problem-inner, #forwho-inner, #pricing-inner, #faq-inner { padding: 72px 20px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .forwho-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .instructor-grid { grid-template-columns: 1fr; }
+      .instructor-avatar { width: 140px; height: 140px; font-size: 3rem; }
+      .cred-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 28px; }
+      .cta-box { padding: 48px 24px; }
+      .modules-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">AIPM<span>ark</span>™</div>
+    <a href="#pricing" class="nav-cta">Enrol Now →</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-eyebrow">
+      <span class="badge badge-gold">⚡ Early Bird Open — Closes Soon</span>
+      <span class="badge badge-blue">🇮🇳 Built for India</span>
+      <span class="badge badge-green">✦ 350+ Students Trained</span>
+    </div>
+    <h1 class="hero-title">
+      AI-Powered Marketer:<br/>
+      <em>The Complete Playbook</em><br/>
+      <span class="line2">for the AI Era.</span>
+    </h1>
+    <p class="hero-sub">
+      The first practical course that teaches you not just <em>what AI tools exist</em> — but how to use them to think, strategise, and execute like a senior marketer. 6 modules. 4–5 hours. Job-ready in weeks.
+    </p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn-primary">Join at Early Bird Price →</a>
+      <a href="#curriculum" class="btn-ghost">See the curriculum</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">350+</div>
+        <div class="stat-label">Students trained at UpGrad &amp; LearnTube</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Practical modules — zero fluff</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4–5h</div>
+        <div class="stat-label">Total content, self-paced</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">₹1,499</div>
+        <div class="stat-label">Early bird price (limited time)</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PROBLEM -->
+  <div id="problem" class="full-bleed">
+    <div id="problem-inner">
+      <div class="problem-grid">
+        <div>
+          <div class="section-tag">⚠ The Problem</div>
+          <h2>Most marketers are using AI like a fancy Google search.</h2>
+          <p style="margin-top: 16px; font-size: 1.05rem;">That's why they're not getting results — and why companies are still looking for someone who actually knows how to wield it.</p>
+          <div class="mistake-list">
+            <div class="mistake-item">
+              <div class="mistake-icon">🔁</div>
+              <div>
+                <h4>Copying outputs without strategy</h4>
+                <p>Using AI to write captions but still guessing on audience, messaging, and positioning.</p>
+              </div>
+            </div>
+            <div class="mistake-item">
+              <div class="mistake-icon">🧩</div>
+              <div>
+                <h4>Tool-hopping instead of system-building</h4>
+                <p>Knowing 12 AI tools. Using none of them as part of a coherent workflow.</p>
+              </div>
+            </div>
+            <div class="mistake-item">
+              <div class="mistake-icon">📉</div>
+              <div>
+                <h4>No measurable output to show hiring managers</h4>
+                <p>Every MBA graduate now says "I use AI." Almost none can show what that actually produced.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="truth-box">
+          <h3>Here's what senior marketers actually do.</h3>
+          <p>They use AI as a system — not a shortcut. They have a prompt library. A content engine. A way to turn data into narrative without being a data analyst. They know what to automate and what to keep human. This course teaches exactly that — the way it actually works in real marketing roles.</p>
+          <br/>
+          <p>Built by someone who has delivered this thinking to 350+ students at UpGrad and LearnTube — not a theorist pulling frameworks from a blog post.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CURRICULUM -->
+  <section id="curriculum">
+    <div class="curriculum-header">
+      <div class="section-tag">📚 The Curriculum</div>
+      <h2>6 modules. Every one built around output, not theory.</h2>
+      <p>Each module ends with something you can use, show, or deploy immediately. This is not a watch-and-forget course.</p>
+    </div>
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-num">Module 01</div>
+        <h3>The AI Marketing Stack (Foundation)</h3>
+        <p>What AI actually does in a marketing context. AI as a tool vs. AI as a system. The core stack: content, data, automation, personalisation. Why most marketers use AI wrong — and what the correct mental model looks like.</p>
+        <div class="module-tags">
+          <span class="module-tag">Foundation</span>
+          <span class="module-tag">Mental Models</span>
+          <span class="module-tag">AI Stack</span>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Module 02</div>
+        <h3>Prompt Engineering for Marketers</h3>
+        <p>Not a developer's guide — a marketer's guide. Writing prompts that produce briefs, copy, campaign ideas, competitor analysis, and persona research. Live examples across ChatGPT, Claude, and Gemini. Includes a reusable prompt library.</p>
+        <div class="module-tags">
+          <span class="module-tag">Prompting</span>
+          <span class="module-tag">ChatGPT</span>
+          <span class="module-tag">Claude</span>
+          <span class="module-tag">Gemini</span>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Module 03</div>
+        <h3>AI-Powered Content &amp; SEO</h3>
+        <p>Build a content engine using AI. Keyword clustering, content calendars, first drafts, repurposing frameworks. What to keep human, what to automate. Platform-specific content for LinkedIn, Instagram, and email.</p>
+        <div class="module-tags">
+          <span class="module-tag">Content Engine</span>
+          <span class="module-tag">SEO</span>
+          <span class="module-tag">LinkedIn</span>
+          <span class="module-tag">Instagram</span>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Module 04</div>
+        <h3>AI in Campaign Strategy &amp; Demand Generation</h3>
+        <p>AI for audience segmentation, message testing, funnel mapping, and campaign briefing. Connecting AI output to real business outcomes — leads, pipeline, revenue language. Includes a GTM brief template built live in the session.</p>
+        <div class="module-tags">
+          <span class="module-tag">Campaigns</span>
+          <span class="module-tag">Demand Gen</span>
+          <span class="module-tag">GTM</span>
+          <span class="module-tag">Segmentation</span>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Module 05</div>
+        <h3>AI-Powered Analytics &amp; Reporting</h3>
+        <p>Making sense of data without being a data analyst. Using AI to interpret dashboards, generate insights, write performance narratives, and brief leadership. Covers GA4 prompting, Looker Studio basics, and AI-assisted reporting.</p>
+        <div class="module-tags">
+          <span class="module-tag">Analytics</span>
+          <span class="module-tag">GA4</span>
+          <span class="module-tag">Reporting</span>
+          <span class="module-tag">Looker Studio</span>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">Module 06</div>
+        <h3>Building Your AI-Augmented Marketing Career</h3>
+        <p>How to position yourself as an AI-forward marketer in interviews and on LinkedIn. Personal brand in the AI era. What hiring managers actually want to see. Portfolio projects you'll build from this course.</p>
+        <div class="module-tags">
+          <span class="module-tag">Career</span>
+          <span class="module-tag">LinkedIn</span>
+          <span class="module-tag">Portfolio</span>
+          <span class="module-tag">Personal Brand</span>
+        </div>
+      </div>
+    </div>
+    <div class="bonus-strip">
+      <div class="bonus-icon">🎁</div>
+      <div class="bonus-text">
+        <h4>Bonus Included: AI Prompt Pack + 90-Day Roadmap</h4>
+        <p>Downloadable pack of 30 reusable marketing prompts across all modules, plus a 90-day personal learning roadmap template to keep your momentum going after the course ends.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FOR WHO -->
+  <div id="forwho" class="full-bleed">
+    <div id="forwho-inner">
+      <div class="section-tag">👤 Who This Is For</div>
+      <h2>Built for the marketer who's serious about the next 5 years.</h2>
+      <div class="forwho-grid">
+        <div class="forwho-card">
+          <h3>✅ This course is for you if...</h3>
+          <ul class="check-list">
+            <li>You're an MBA or Masters student in Marketing or Communications</li>
+            <li>You're an early-career marketer (under 2 years of experience)</li>
+            <li>You want to use AI strategically, not just as a writing shortcut</li>
+            <li>You need to stand out in a hiring market that's saturated with "I use AI" claims</li>
+            <li>You're in India — or part of the UK/UAE diaspora — and want India-context relevance</li>
+            <li>You learn by doing, not by watching someone read slides</li>
+          </ul>
+        </div>
+        <div class="forwho-card">
+          <h3>❌ This is not for you if...</h3>
+          <ul class="check-list">
+            <li>You're looking for a deep dive into AI engineering or Python</li>
+            <li>You already have 5+ years in senior marketing and use AI systems daily</li>
+            <li>You want another overview course that lists tools without showing you how to use them</li>
+            <li>You're not willing to do the work — there are projects and templates to actually complete</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTRUCTOR -->
+  <section id="instructor">
+    <div class="instructor-grid">
+      <div class="instructor-avatar">👤</div>
+      <div class="instructor-content">
+        <div class="section-tag instructor-tag">🎓 Your Instructor</div>
+        <h2>Built by someone who has actually taught this.</h2>
+        <p class="text-white">Not a content creator who discovered AI in 2023. Not a theorist repurposing someone else's framework. This course was built by someone who has stood in front of 350+ students at UpGrad and LearnTube and taught digital marketing — and watched exactly where the gaps were.</p>
+        <p>The AI tools have changed. The fundamentals haven't. This course sits at the intersection: practical AI application, built on a real marketing foundation, taught by someone who has done both.</p>
+        <div class="cred-grid">
+          <div class="cred-item">
+            <div>
+              <div class="cred-num">350+</div>
+              <div class="cred-desc">Students trained across UpGrad &amp; LearnTube</div>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div>
+              <div class="cred-num">6</div>
+              <div class="cred-desc">Modules — each built on real classroom experience</div>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div>
+              <div class="cred-num">MBA</div>
+              <div class="cred-desc">Foundation in Marketing &amp; Strategy</div>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div>
+              <div class="cred-num">2 yrs+</div>
+              <div class="cred-desc">Active teaching experience in digital marketing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PRICING -->
+  <div id="pricing" class="full-bleed">
+    <div id="pricing-inner">
+      <div class="pricing-header">
+        <div class="section-tag">💳 Pricing</div>
+        <h2>Get in early. The price goes up as the cohort fills.</h2>
+        <p>One-time payment. Lifetime access. No subscription. No upsell once you're in.</p>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div style="display: inline-block;">
+          <div style="font-size: 0.82rem; color: var(--gold); font-weight: 600; margin-bottom: 8px; letter-spacing: 0.05em;">⚡ EARLY BIRD CLOSES IN</div>
+          <div class="countdown-box">
+            <div class="countdown-segment">
+              <span class="countdown-num" id="cd-days">03</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-segment">
+              <span class="countdown-num" id="cd-hours">14</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-segment">
+              <span class="countdown-num" id="cd-mins">22</span>
+              <span class="countdown-label">Mins</span>
+            </div>
+            <div class="countdown-segment">
+              <span class="countdown-num" id="cd-secs">09</span>
+              <span class="countdown-label">Secs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Early Bird -->
+        <div class="pricing-card">
+          <div class="pricing-label">Self-Paced Access</div>
+          <div class="pricing-price"><small>₹</small>1,499</div>
+          <div class="pricing-original">₹2,999 after launch</div>
+          <div class="pricing-desc">Early bird — limited 48-hour window. Everything you need to go AI-forward, at your own pace.</div>
+          <ul class="pricing-features">
+            <li>All 6 course modules (4–5 hours)</li>
+            <li>AI Prompt Pack (30 reusable prompts)</li>
+            <li>90-Day Learning Roadmap template</li>
+            <li>GTM brief template</li>
+            <li>Lifetime access + future updates</li>
+          </ul>
+          <a href="#waitlist" class="btn-pricing btn-pricing-ghost">Enrol at ₹1,499</a>
+        </div>
+
+        <!-- Launch Price -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">Most Popular</div>
+          <div class="pricing-label">Launch Price</div>
+          <div class="pricing-price"><small>₹</small>1,999</div>
+          <div class="pricing-original">₹2,999 at full price</div>
+          <div class="pricing-desc">After early bird closes. All course access, all bonuses — this is where most students will land.</div>
+          <ul class="pricing-features">
+            <li>All 6 course modules (4–5 hours)</li>
+            <li>AI Prompt Pack (30 reusable prompts)</li>
+            <li>90-Day Learning Roadmap template</li>
+            <li>GTM brief template</li>
+            <li>Lifetime access + future updates</li>
+            <li>Access to Q&amp;A on launch week live call</li>
+          </ul>
+          <a href="#waitlist" class="btn-pricing btn-pricing-primary">Enrol at ₹1,999</a>
+        </div>
+
+        <!-- Cohort -->
+        <div class="pricing-card">
+          <div class="pricing-label">Cohort Add-On</div>
+          <div class="pricing-price"><small>₹</small>4,999</div>
+          <div class="pricing-desc">Everything in Launch, plus live cohort sessions, peer community, and direct instructor access.</div>
+          <ul class="pricing-features">
+            <li>Everything in Launch price</li>
+            <li>Live cohort sessions (group calls)</li>
+            <li>Peer community access</li>
+            <li>Direct instructor Q&amp;A time</li>
+            <li>Portfolio project review</li>
+          </ul>
+          <a href="#waitlist" class="btn-pricing btn-pricing-gold">Apply for Cohort</a>
+        </div>
+      </div>
+
+      <p class="pricing-note">
+        Payment via Razorpay (UPI, cards, net banking). <strong>100% secure.</strong> Questions? Message on WhatsApp.
+      </p>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testimonials-header">
+      <div class="section-tag">💬 Early Feedback</div>
+      <h2>What students from UpGrad &amp; LearnTube say.</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"Finally a course that doesn't just say 'use ChatGPT for everything.' The module on prompt engineering alone changed how I approach every brief."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div>
+            <div class="author-name">Priya M.</div>
+            <div class="author-role">MBA Marketing, Mumbai</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"I used the GTM brief template from Module 4 in my actual internship. My manager asked who taught me to think like that. This course."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div>
+            <div class="author-name">Rahul S.</div>
+            <div class="author-role">Digital Marketing Executive, Bangalore</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-text">"The content engine module gave me a 90-day calendar I actually shipped. Not a template — a real plan, built in AI, tuned to my brand."</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Ananya K.</div>
+            <div class="author-role">Content Marketer, Delhi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FAQ -->
+  <div id="faq" class="full-bleed">
+    <div id="faq-inner">
+      <div class="faq-header">
+        <div class="section-tag">❓ FAQ</div>
+        <h2>Your questions, answered.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do I need a technical background to take this course?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">No. This course is built for marketers, not developers. Every concept is explained in marketing language. If you know how to write a brief, you're ready. The only tools you'll use are ChatGPT, Claude, Gemini, GA4, and Canva — all available on free tiers.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is this course self-paced or live?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Self-paced — you can go through all 6 modules whenever suits you. There's also one live group call during launch week (included in the Launch and Cohort tiers). The Cohort add-on includes additional live sessions and peer community access.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How long will it take to complete?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">The course is 4–5 hours of content across 6 modules. Most students complete it over a weekend or across a few evenings. The templates and projects you'll build during the course add practical time, but those are the things you'll actually keep and use.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What AI tools do I need? Do I have to pay for them?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">All tools used in the course have free tiers — ChatGPT (free), Claude (free), Gemini (free), Google Analytics 4 (free), Canva (free). You do not need to purchase any paid AI subscription to complete this course or get the full value from it.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What if I'm already working in marketing — is this too basic?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">If you're under 2 years into your marketing career, no — this will fill real gaps. If you're already running AI systems for a marketing team and have a structured prompt library and content engine in place, this course might cover things you already know. It's targeted at early-career marketers who want to go from "I use AI occasionally" to "I use AI systematically."</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I get a refund if it's not right for me?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Yes — 7-day refund, no questions asked, as long as you haven't completed more than 2 modules. If you've gone through the first two modules and don't think it's right for you, reach out and we'll sort it.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is the content India-specific?
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Primarily, yes. Examples, case studies, and platform choices (WhatsApp marketing, Instagram-first content strategies, regional SEO considerations) are grounded in the Indian market. Students in the UK and UAE diaspora have found the content highly applicable, but the primary lens is India.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <section id="cta-final">
+    <div class="cta-box">
+      <div class="section-tag" style="justify-content: center;">🚀 Ready?</div>
+      <h2>The AI-forward marketer wins.<br/>Become one.</h2>
+      <p>Early bird pricing closes in 48 hours. Every week you wait, the gap between you and the marketers who've already built these skills gets wider.</p>
+      <div class="cta-actions">
+        <a href="#pricing" class="btn-primary" style="font-size: 1.05rem; padding: 18px 40px;">Join at Early Bird Price →</a>
+        <a href="#curriculum" class="btn-ghost">See the full curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST ANCHOR -->
+  <div id="waitlist"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>AIPMark™ — AI-Powered Marketer Playbook &nbsp;·&nbsp; <a href="mailto:hello@markoholics.com">hello@markoholics.com</a></p>
+    <p style="margin-top: 8px;">© 2026 Markoholics. All rights reserved. &nbsp;·&nbsp; Built for MBA students and early-career marketers in India.</p>
+  </footer>
+
+  <script>
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Countdown — set your early bird end date here
+    (function () {
+      // CHANGE THIS: Set to your actual early bird end date (ISO string, IST = UTC+5:30)
+      const END_DATE = new Date('2026-04-14T23:59:59+05:30').getTime();
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        const now = Date.now();
+        const diff = END_DATE - now;
+        if (diff <= 0) {
+          document.getElementById('cd-days').textContent = '00';
+          document.getElementById('cd-hours').textContent = '00';
+          document.getElementById('cd-mins').textContent = '00';
+          document.getElementById('cd-secs').textContent = '00';
+          return;
+        }
+        const days  = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const mins  = Math.floor((diff % 3600000) / 60000);
+        const secs  = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent  = pad(days);
+        document.getElementById('cd-hours').textContent = pad(hours);
+        document.getElementById('cd-mins').textContent  = pad(mins);
+        document.getElementById('cd-secs').textContent  = pad(secs);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Smooth scroll for anchor buttons
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
