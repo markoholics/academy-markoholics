@@ -1,12 +1,13 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "photo.jpg",  "use": "@vercel/static" },
+    { "src": "photo.jpeg", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/photo.jpg",  "dest": "/photo.jpg" },
+    { "src": "/photo.jpeg", "dest": "/photo.jpeg" },
+    { "src": "/(.*)",       "dest": "/index.html" }
   ]
 }
