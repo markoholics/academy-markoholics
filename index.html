@@ -2048,7 +2048,15 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-left">AIPMark™ — AI-Powered Marketer Playbook &nbsp;·&nbsp; © 2026 Markoholics</div>
+        <div class="footer-left">
+          <a href="https://humantothepowerofai.com" target="_blank" rel="noopener"
+            style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
+            <img src="logo.png" alt="Human to the Power of AI"
+              style="height:22px; width:auto; filter:brightness(0) invert(1); opacity:0.7;"
+              onerror="this.outerHTML='<span style=\'font-weight:700;color:#fff;font-size:0.9rem;\'>H²AI</span>'" />
+          </a>
+          <span style="margin-left:12px;">© 2026 Human to the Power of AI</span>
+        </div>
         <div class="footer-right">Questions? <a href="mailto:contact@humantothepowerofai.com">contact@humantothepowerofai.com</a></div>
       </div>
     </div>
@@ -2146,73 +2154,46 @@
         </form>
       </div>
 
-      <!-- STEP 2: UPI Payment -->
+      <!-- STEP 2: Payment Success -->
       <div class="modal-body hidden" id="modal-step-2">
-        <div class="upi-step">
-          <div class="success-tag">✓ Spot Confirmed</div>
-          <h3>One last step — complete your payment</h3>
-          <p class="upi-sub" id="upi-amount-line">Scan the QR or tap Pay Now to open your UPI app</p>
-
-          <!-- QR code via qrserver.com — no JS library needed -->
-          <div style="display:flex; justify-content:center; margin: 20px 0 16px;">
-            <img id="upi-qr-img" src="" alt="UPI QR Code loading…"
-              style="width:200px;height:200px;background:#fff;padding:10px;display:block;" />
+        <div style="text-align:center; padding: 12px 0 8px;">
+          <div style="font-size:3rem; margin-bottom:16px;">🎉</div>
+          <div class="success-tag" style="margin-bottom:16px;">✓ Payment Confirmed</div>
+          <h3 style="margin-bottom:12px; color:var(--text);">You're in. Welcome to the cohort.</h3>
+          <p style="font-size:0.9rem; margin-bottom:28px;" id="success-detail">
+            Your spot has been confirmed and payment received.
+          </p>
+          <div style="background:var(--card); border:1px solid var(--border); border-left:3px solid var(--green); padding:20px 24px; text-align:left; margin-bottom:24px;">
+            <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green); margin-bottom:8px;">What happens next</div>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+              <li style="font-size:0.875rem; color:var(--text2); display:flex; gap:10px;"><span style="color:var(--blue);">→</span> You'll receive a WhatsApp message with your cohort details within 2 hours</li>
+              <li style="font-size:0.875rem; color:var(--text2); display:flex; gap:10px;"><span style="color:var(--blue);">→</span> Session schedule and pre-work will be shared 48 hours before the first module</li>
+              <li style="font-size:0.875rem; color:var(--text2); display:flex; gap:10px;"><span style="color:var(--blue);">→</span> Add <strong>contact@humantothepowerofai.com</strong> to your contacts</li>
+            </ul>
           </div>
-
-          <div class="upi-box">
-            <div class="upi-box-label">Pay to UPI ID</div>
-            <div class="upi-id-display" id="upi-id-display">9833585378@hdfc</div>
-            <div class="upi-amount" id="upi-amount-display" style="margin-top:4px;"></div>
-          </div>
-
-          <!-- Per-app deep links (mobile only) -->
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">
-            <a id="gpay-link" href="#" class="btn btn-ghost" style="justify-content:center; font-size:0.82rem; padding:11px 10px;">
-              GPay →
-            </a>
-            <a id="phonepe-link" href="#" class="btn btn-ghost" style="justify-content:center; font-size:0.82rem; padding:11px 10px;">
-              PhonePe →
-            </a>
-            <a id="upi-pay-link" href="#" class="btn btn-primary" style="justify-content:center; font-size:0.82rem; padding:11px 10px; grid-column:1/-1;">
-              Open Any UPI App →
-            </a>
-          </div>
-
-          <ul class="upi-instructions" style="margin-bottom:18px;">
-            <li>Scan the QR code above using GPay, PhonePe, Paytm, or BHIM</li>
-            <li>On mobile, tap a button above to open your UPI app directly</li>
-            <li>Verify the amount before confirming payment</li>
-            <li>Screenshot your payment confirmation screen</li>
-            <li>WhatsApp it to Mohammad H. Rahman — confirmed within 2 hours</li>
-          </ul>
-
-          <a id="whatsapp-link" href="#" target="_blank" class="btn btn-ghost"
-            style="width:100%; justify-content:center; display:flex; margin-bottom:10px;">
-            📱 Send Payment Screenshot on WhatsApp →
-          </a>
-
-          <button onclick="closeModal()" style="width:100%; background:transparent; border:none; color:var(--muted); font-size:0.82rem; cursor:pointer; padding:8px;">
-            Done — I've sent the screenshot
+          <button onclick="closeModal()" class="btn btn-primary" style="width:100%; justify-content:center;">
+            Done — see you in the cohort →
           </button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Razorpay Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
   <script>
-    // ── SUPABASE ──
-    const SUPABASE_URL = 'https://xlfblvgtsqykyrnduyvn.supabase.co';
+    // ── SUPABASE (anon key — only for inserts from the browser) ──
+    const SUPABASE_URL  = 'https://xlfblvgtsqykyrnduyvn.supabase.co';
     const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsZmJsdmd0c3F5a3lybmR1eXZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1NDY3MTgsImV4cCI6MjA5MDEyMjcxOH0.GfxMZ0tmMG1LL_A141ATBhmMVQdPl4EJvCmh7g-21mo';
     const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
-    // ── CONFIG — REPLACE THESE ──
-    const UPI_ID = '9833585378@hdfc';          // ← your UPI ID
-    const WHATSAPP_NUM = '919833585378';           // ← your WhatsApp with country code, no +
+    const WHATSAPP_NUM = '919833585378';
 
     const TIER_INFO = {
-      earlybird: { label: 'Early Bird Access', price: '₹1,499', amount: 1499 },
-      standard: { label: 'Standard Enrolment', price: '₹1,999', amount: 1999 },
-      cohort: { label: 'Full Cohort Experience', price: '₹4,999', amount: 4999 },
+      earlybird: { label: 'Early Bird Access',    price: '₹1,499', amount: 1499 },
+      standard:  { label: 'Standard Enrolment',   price: '₹1,999', amount: 1999 },
+      cohort:    { label: 'Full Cohort Experience',price: '₹4,999', amount: 4999 },
     };
 
     let currentTier = 'earlybird';
@@ -2236,76 +2217,133 @@
       currentTier = tier;
       document.querySelectorAll('.tier-option').forEach(el => el.classList.remove('selected'));
       const el = document.getElementById('tier-' + tier);
-      if (el) {
-        el.classList.add('selected');
-        el.querySelector('input').checked = true;
-      }
+      if (el) { el.classList.add('selected'); el.querySelector('input').checked = true; }
       const info = TIER_INFO[tier];
       document.getElementById('modal-tier-subtitle').textContent = info ? `${info.label} — ${info.price}` : 'Select your tier';
     }
-
     function selectTier(input) { setTier(input.value); }
 
     // ── FORM SUBMIT ──
     async function submitForm(e) {
       e.preventDefault();
-      const btn = document.getElementById('btn-submit');
+      const btn   = document.getElementById('btn-submit');
       const errEl = document.getElementById('form-error');
       errEl.classList.remove('visible');
+
+      // Loading state — prevent duplicate clicks
       btn.disabled = true;
       btn.classList.add('loading');
       btn.textContent = 'Saving your spot…';
 
-      const tier = currentTier;
-      const info = TIER_INFO[tier];
-
+      const info    = TIER_INFO[currentTier];
       const payload = {
-        full_name: document.getElementById('field-name').value.trim(),
-        email: document.getElementById('field-email').value.trim(),
-        whatsapp: document.getElementById('field-whatsapp').value.trim(),
-        current_role: document.getElementById('field-role').value.trim(),
+        full_name:          document.getElementById('field-name').value.trim(),
+        email:              document.getElementById('field-email').value.trim(),
+        whatsapp:           document.getElementById('field-whatsapp').value.trim(),
+        current_role:       document.getElementById('field-role').value.trim(),
         college_or_company: document.getElementById('field-org').value.trim(),
-        city: document.getElementById('field-city').value,
-        selected_tier: info.label,
-        tier_price: info.price,
-        payment_status: 'pending',
+        city:               document.getElementById('field-city').value,
+        selected_tier:      info.label,
+        tier_price:         info.price,
+        payment_status:     'pending',
       };
 
       try {
-        const { error } = await sb.from('enrollments').insert([payload]);
-        if (error) throw error;
+        // ── Step 1: Save enrollment, get back the UUID ──
+        const { data: rows, error: dbErr } = await sb
+          .from('enrollments')
+          .insert([payload])
+          .select('id')
+          .single();
+        if (dbErr) throw dbErr;
+        const enrollmentId = rows.id;
 
-        // ── Build UPI payment URL (standard BharatPe/NPCI format) ──
-        const upiUrl = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent('Mohammad H Rahman')}&am=${info.amount}&cu=INR&tn=${encodeURIComponent('H2AI Course')}`;
+        btn.textContent = 'Opening payment…';
 
-        // Update UPI display text
-        document.getElementById('upi-id-display').textContent = UPI_ID;
-        document.getElementById('upi-amount-display').textContent = `Amount: ${info.price}`;
-        document.getElementById('upi-amount-line').textContent = `Scan the QR below — send exactly ${info.price}`;
+        // ── Step 2: Create Razorpay order on the server ──
+        const orderRes = await fetch('/api/create-order', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({
+            amount_inr:    info.amount,
+            tier_label:    info.label,
+            enrollment_id: enrollmentId,
+          }),
+        });
+        if (!orderRes.ok) {
+          const { error } = await orderRes.json();
+          throw new Error(error || 'Failed to create payment order');
+        }
+        const order = await orderRes.json();
 
-        // ── Generate QR code via qrserver.com (no JS library needed, always works) ──
-        const qrData = encodeURIComponent(upiUrl);
-        const qrImg = document.getElementById('upi-qr-img');
-        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=10&data=${qrData}`;
-        qrImg.alt = `Scan to pay ${info.price}`;
+        // ── Step 3: Open Razorpay Checkout popup ──
+        const rzp = new Razorpay({
+          key:         order.key_id,
+          amount:      order.amount,
+          currency:    order.currency,
+          order_id:    order.order_id,
+          name:        'Human to the Power of AI',
+          description: info.label,
+          image:       '/logo.png',
+          prefill: {
+            name:    payload.full_name,
+            email:   payload.email,
+            contact: payload.whatsapp,
+          },
+          theme:       { color: '#4B6BFB' },
 
-        // ── UPI deep links per app (most reliable on mobile) ──
-        document.getElementById('upi-pay-link').href = upiUrl;
-        document.getElementById('gpay-link').href  = `gpay://upi/pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent('Mohammad H Rahman')}&am=${info.amount}&cu=INR`;
-        document.getElementById('phonepe-link').href = `phonepe://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent('Mohammad H Rahman')}&am=${info.amount}&cu=INR`;
+          // ── Step 4: On successful payment, verify on server ──
+          handler: async function(response) {
+            try {
+              const verifyRes = await fetch('/api/verify-payment', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  razorpay_order_id:   response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature:  response.razorpay_signature,
+                  enrollment_id:       enrollmentId,
+                }),
+              });
+              if (!verifyRes.ok) {
+                const { error } = await verifyRes.json();
+                throw new Error(error || 'Verification failed');
+              }
+              // Show success screen
+              document.getElementById('success-detail').textContent =
+                `Payment of ${info.price} confirmed for ${info.label}. Payment ID: ${response.razorpay_payment_id}`;
+              document.getElementById('modal-step-1').classList.add('hidden');
+              document.getElementById('modal-step-2').classList.remove('hidden');
+            } catch (verifyErr) {
+              // Payment went through but verification failed — don't block user
+              alert('Payment received! Please WhatsApp us your payment ID: ' + response.razorpay_payment_id);
+              closeModal();
+            }
+          },
 
-        // ── WhatsApp confirmation link ──
-        const waMsg = encodeURIComponent(
-          `Hi Mohammad, I've enrolled in the H2AI AI-Powered Marketer course (${info.label} — ${info.price}) and completed the UPI payment to ${UPI_ID}. Name: ${payload.full_name}. Sending screenshot now.`
-        );
-        document.getElementById('whatsapp-link').href = `https://wa.me/${WHATSAPP_NUM}?text=${waMsg}`;
+          // ── Step 5: Handle dismissed / failed ──
+          modal: {
+            ondismiss: function() {
+              btn.disabled = false;
+              btn.classList.remove('loading');
+              btn.textContent = 'Confirm & Proceed to Payment →';
+            }
+          }
+        });
 
-        document.getElementById('modal-step-1').classList.add('hidden');
-        document.getElementById('modal-step-2').classList.remove('hidden');
+        rzp.on('payment.failed', function(response) {
+          errEl.textContent = `Payment failed: ${response.error.description}. Please try again.`;
+          errEl.classList.add('visible');
+          btn.disabled = false;
+          btn.classList.remove('loading');
+          btn.textContent = 'Confirm & Proceed to Payment →';
+        });
+
+        rzp.open();
 
       } catch (err) {
-        console.error(err);
-        errEl.textContent = 'Something went wrong — please try again or WhatsApp us directly.';
+        console.error('[submitForm]', err);
+        errEl.textContent = err.message || 'Something went wrong — please try again or WhatsApp us.';
         errEl.classList.add('visible');
         btn.disabled = false;
         btn.classList.remove('loading');
@@ -2316,17 +2354,8 @@
     // ── PHONE FORMATTER — enforces +91XXXXXXXXXX, no spaces ──
     function formatPhone(input) {
       let v = input.value.replace(/\s+/g, '').replace(/[^0-9+]/g, '');
-      // Auto-prepend +91 if user starts typing digits
-      if (v.length > 0 && !v.startsWith('+')) {
-        if (v.startsWith('91') && v.length > 2) v = '+' + v;
-        else if (!v.startsWith('9')) v = '+91' + v;
-        else v = '+91' + v;
-      }
-      // Strip everything after +91 and take only 10 digits
-      if (v.startsWith('+91')) {
-        const digits = v.slice(3).replace(/[^0-9]/g, '').slice(0, 10);
-        v = '+91' + digits;
-      }
+      if (v.length > 0 && !v.startsWith('+')) v = '+91' + v.replace(/^91/, '');
+      if (v.startsWith('+91')) v = '+91' + v.slice(3).replace(/[^0-9]/g, '').slice(0, 10);
       input.value = v;
     }
 
