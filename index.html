@@ -2236,11 +2236,15 @@
       btn.textContent = 'Saving your spot…';
 
       const info    = TIER_INFO[currentTier];
+      // Generate UUID client-side so we never need to SELECT after INSERT
+      // (anon role has no SELECT policy — doing .insert().select() triggers RLS error)
+      const enrollmentId = crypto.randomUUID();
       const payload = {
+        id:                 enrollmentId,
         full_name:          document.getElementById('field-name').value.trim(),
         email:              document.getElementById('field-email').value.trim(),
         whatsapp:           document.getElementById('field-whatsapp').value.trim(),
-        role:       document.getElementById('field-role').value.trim(),
+        role:               document.getElementById('field-role').value.trim(),
         college_or_company: document.getElementById('field-org').value.trim(),
         city:               document.getElementById('field-city').value,
         selected_tier:      info.label,
@@ -2249,14 +2253,11 @@
       };
 
       try {
-        // ── Step 1: Save enrollment, get back the UUID ──
-        const { data: rows, error: dbErr } = await sb
+        // ── Step 1: Save enrollment ──
+        const { error: dbErr } = await sb
           .from('enrollments')
-          .insert([payload])
-          .select('id')
-          .single();
+          .insert([payload]);
         if (dbErr) throw dbErr;
-        const enrollmentId = rows.id;
 
         btn.textContent = 'Opening payment…';
 
