@@ -9,8 +9,10 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
-    { "src": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook", "dest": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/index.html" },
-    { "src": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/", "dest": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/index.html" },
+    { "src": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai",          "dest": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai/index.html" },
+    { "src": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai/",         "dest": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai/index.html" },
+    { "src": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook",   "dest": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/index.html" },
+    { "src": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/",  "dest": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/index.html" },
     { "src": "/blog",     "dest": "/blog/index.html" },
     { "src": "/blog/",    "dest": "/blog/index.html" },
     { "src": "/photo.jpg",  "dest": "/photo.jpg" },
