@@ -1021,51 +1021,6 @@
         <p>Replace <em>organic click-through rate</em> with <strong>Brand Mention Share (BMS)</strong> — the frequency with which AI agents cite your brand in relevant task completions. Track this alongside API/Action Conversions from agentic task flows.</p>
       </div>
 
-      <!-- JSON-LD SECTION -->
-      <div class="section-heading">
-        <span class="section-number">+</span>
-        <h2>JSON-LD Schema Implementation</h2>
-      </div>
-
-      <p>
-        Paste this structured data block into your page <code style="font-family:'Fira Code',monospace;font-size:0.88em;color:#8FA8FF;background:rgba(75,107,251,0.1);padding:1px 6px;border-radius:3px;">&lt;head&gt;</code> to immediately signal entity context to all three AI systems:
-      </p>
-
-      <div class="code-block">
-        <div class="code-block-header">
-          <span class="code-lang">JSON-LD / HTML</span>
-          <span class="code-label">Paste into &lt;head&gt;</span>
-        </div>
-        <pre>&lt;<span class="kw">script</span> <span class="key">type</span>=<span class="str">"application/ld+json"</span>&gt;
-{
-  <span class="key">"@context"</span>: <span class="str">"https://schema.org"</span>,
-  <span class="key">"@type"</span>: <span class="str">"BlogPosting"</span>,
-  <span class="key">"mainEntityOfPage"</span>: {
-    <span class="key">"@type"</span>: <span class="str">"WebPage"</span>,
-    <span class="key">"@id"</span>: <span class="url">"https://humantothepowerofai.com/blog/..."</span>
-  },
-  <span class="key">"headline"</span>: <span class="str">"Your Post Headline Here"</span>,
-  <span class="key">"description"</span>: <span class="str">"One-sentence summary for AI agents"</span>,
-  <span class="key">"datePublished"</span>: <span class="str">"2026-05-20T08:00:00+00:00"</span>,
-  <span class="key">"author"</span>: {
-    <span class="key">"@type"</span>: <span class="str">"Organization"</span>,
-    <span class="key">"name"</span>: <span class="str">"Human to the Power of AI"</span>,
-    <span class="key">"url"</span>: <span class="url">"https://humantothepowerofai.com/"</span>
-  },
-  <span class="key">"about"</span>: [{
-    <span class="key">"@type"</span>: <span class="str">"Thing"</span>,
-    <span class="key">"name"</span>: <span class="str">"Artificial Intelligence"</span>,
-    <span class="key">"sameAs"</span>: <span class="url">"https://en.wikipedia.org/wiki/Artificial_intelligence"</span>
-  }],
-  <span class="key">"mentions"</span>: [
-    { <span class="key">"@type"</span>: <span class="str">"Organization"</span>, <span class="key">"name"</span>: <span class="str">"Google"</span>,   <span class="key">"sameAs"</span>: <span class="url">"https://en.wikipedia.org/wiki/Google"</span>   },
-    { <span class="key">"@type"</span>: <span class="str">"Organization"</span>, <span class="key">"name"</span>: <span class="str">"OpenAI"</span>,  <span class="key">"sameAs"</span>: <span class="url">"https://en.wikipedia.org/wiki/OpenAI"</span>  },
-    { <span class="key">"@type"</span>: <span class="str">"Organization"</span>, <span class="key">"name"</span>: <span class="str">"Anthropic"</span>,<span class="key">"sameAs"</span>: <span class="url">"https://en.wikipedia.org/wiki/Anthropic"</span> }
-  ]
-}
-&lt;/<span class="kw">script</span>&gt;</pre>
-      </div>
-
       <!-- CONCLUSION -->
       <div class="conclusion-box">
         <h2>Human to the Power of AI</h2>
