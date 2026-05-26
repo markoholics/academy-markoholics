@@ -9,6 +9,8 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/blog/google-ads-agentic-ai-era-search",                            "dest": "/blog/google-ads-agentic-ai-era-search/index.html" },
+    { "src": "/blog/google-ads-agentic-ai-era-search/",                           "dest": "/blog/google-ads-agentic-ai-era-search/index.html" },
     { "src": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai",          "dest": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai/index.html" },
     { "src": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai/",         "dest": "/blog/h2ai-framework-why-human-x-ai-beats-human-plus-ai/index.html" },
     { "src": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook",   "dest": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/index.html" },
