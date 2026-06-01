@@ -1892,6 +1892,7 @@
             <li>Capstone industry project with personalised written review and feedback</li>
             <li>LinkedIn profile audit and optimisation session</li>
             <li>Opportunity to join H²AI as an intern or team member upon completion</li>
+            <li><strong>🎁 Bonus Module:</strong> AI Workflows and Automation for Marketers</li>
           </ul>
           <button class="btn-enrol btn-enrol-gold" onclick="openModal('cohort')">Apply for Full Cohort →</button>
         </div>
@@ -2034,7 +2035,7 @@
         <div>
           <span class="section-label">Ready?</span>
           <h2>The AI-powered marketer wins.<br />Become one.</h2>
-          <p>Early bird pricing closes on 15 May 2026. Every week you wait, the gap between you and the marketers who've
+          <p>Early bird pricing closes on 30 June 2026. Every week you wait, the gap between you and the marketers who've
             already built these skills gets wider.</p>
         </div>
         <div class="cta-actions">
@@ -2081,7 +2082,7 @@
             <input type="radio" name="tier" value="earlybird" onchange="selectTier(this)" />
             <div class="tier-option-info">
               <div class="tier-option-name">Early Bird Access</div>
-              <div class="tier-option-price">₹1,499 — Closes 15 May 2026</div>
+              <div class="tier-option-price">₹1,499 — Closes 30 June 2026</div>
             </div>
           </label>
           <label class="tier-option" id="tier-standard">
@@ -2372,7 +2373,7 @@
     // ── COUNTDOWN ──
     (function () {
       // CHANGE: set to your actual early bird end date (IST = UTC+5:30)
-      const END = new Date('2026-05-15T23:59:59+05:30').getTime();
+      const END = new Date('2026-06-30T23:59:00+05:30').getTime();
       function pad(n) { return String(n).padStart(2, '0'); }
       function tick() {
         const diff = END - Date.now();
