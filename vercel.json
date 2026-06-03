@@ -9,6 +9,8 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/blog/beyond-the-citation-monetizing-google-agentic-search-funnel",          "dest": "/blog/beyond-the-citation-monetizing-google-agentic-search-funnel/index.html" },
+    { "src": "/blog/beyond-the-citation-monetizing-google-agentic-search-funnel/",         "dest": "/blog/beyond-the-citation-monetizing-google-agentic-search-funnel/index.html" },
     { "src": "/blog/synthetic-chokehold-how-to-build-owned-audience-agentic-era",  "dest": "/blog/synthetic-chokehold-how-to-build-owned-audience-agentic-era/index.html" },
     { "src": "/blog/synthetic-chokehold-how-to-build-owned-audience-agentic-era/", "dest": "/blog/synthetic-chokehold-how-to-build-owned-audience-agentic-era/index.html" },
     { "src": "/blog/google-ads-agentic-ai-era-search",                            "dest": "/blog/google-ads-agentic-ai-era-search/index.html" },
