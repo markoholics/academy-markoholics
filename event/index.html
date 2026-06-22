@@ -887,12 +887,24 @@
         designation:    document.getElementById('f-designation').value.trim(),
       };
 
-      const { error } = await sb
-        .from('AI_search_registrations')
-        .insert([payload]);
+      let res;
+      try {
+        res = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+      } catch (_) {
+        errEl.textContent = 'Network error. Please check your connection and try again.';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Register for Free →';
+        return;
+      }
 
-      if (error) {
-        errEl.textContent = 'Something went wrong. Please try again or email contact@humantothepowerofai.com.';
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        errEl.textContent = data.error || 'Something went wrong. Please try again or email contact@humantothepowerofai.com.';
         errEl.style.display = 'block';
         btn.disabled = false;
         btn.textContent = 'Register for Free →';
