@@ -30,6 +30,11 @@
     { "src": "/privacy-policy/", "dest": "/privacy-policy/index.html" },
     { "src": "/terms",           "dest": "/terms/index.html" },
     { "src": "/terms/",          "dest": "/terms/index.html" },
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": "aipoweredsearch\\.academy\\.humantothepowerofai\\.com" }],
+      "dest": "/event/index.html"
+    },
     { "src": "/(.*)",            "dest": "/index.html" }
   ]
 }
