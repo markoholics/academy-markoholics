@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Adapt to Google's Agentic AI Search: A Brand Playbook — Free Webinar</title>
+  <meta name="description" content="Free 60-min live session for SEO and digital marketers. Learn how to get your brand cited by Google's AI instead of buried beneath it. 10 July 2026, 7PM IST on Zoom." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="How to Adapt to Google's Agentic AI Search: A Brand Playbook — Free Webinar" />
+  <meta property="og:description" content="Free 60-min live session on Zoom, 10 July 2026 at 7PM IST. Learn how to get your brand cited by Google's AI. Register now." />
+  <meta property="og:url" content="https://aipoweredsearch.academy.humantothepowerofai.com" />
+  <meta property="og:image" content="https://academy.humantothepowerofai.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Webinar: Google's Agentic AI Search Brand Playbook" />
+  <meta name="twitter:description" content="10 July 2026 · 7PM IST · Zoom · Free · 60 min + Q&A" />
+  <link rel="canonical" href="https://aipoweredsearch.academy.humantothepowerofai.com" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1315270216683297');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1315270216683297&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0C0C12;
+      --bg2: #0F0F18;
+      --card: #13131F;
+      --card-hover: #1A1A2A;
+      --border: rgba(255,255,255,0.07);
+      --border-strong: rgba(255,255,255,0.12);
+      --blue: #4B6BFB;
+      --blue-dim: rgba(75,107,251,0.15);
+      --gold: #E8940E;
+      --gold-dim: rgba(232,148,14,0.12);
+      --green: #22C55E;
+      --text: #FFFFFF;
+      --text2: #C8C8D8;
+      --muted: #6E6E88;
+      --radius: 2px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Inter', sans-serif; font-size: 16px;
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: rgba(12,12,18,0.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+
+    .nav-logo-img {
+      height: 28px; width: auto;
+      filter: brightness(0) invert(1); opacity: 0.92;
+    }
+
+    .nav-logo-text {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); line-height: 1.3;
+      border-left: 1px solid var(--border-strong); padding-left: 10px;
+    }
+
+    .nav-cta {
+      background: var(--blue); color: #fff;
+      padding: 9px 22px; border-radius: var(--radius);
+      font-size: 0.85rem; font-weight: 600;
+      transition: opacity 0.2s; cursor: pointer; border: none;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* LAYOUT */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .narrow    { max-width: 720px;  margin: 0 auto; padding: 0 40px; }
+
+    /* HERO */
+    .hero {
+      padding-top: 120px; padding-bottom: 80px;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(75,107,251,0.12) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: start;
+    }
+
+    .hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px; border-radius: 100px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    }
+
+    .badge-free {
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.3); color: #4ADE80;
+    }
+
+    .badge-live {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.25); color: #FCA5A5;
+    }
+
+    .badge-zoom {
+      background: var(--blue-dim);
+      border: 1px solid rgba(75,107,251,0.3); color: #8FA8FF;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 800;
+      line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--blue); }
+
+    .hero-desc {
+      font-size: 1.05rem; color: var(--text2);
+      line-height: 1.78; margin-bottom: 32px; max-width: 580px;
+    }
+
+    /* EVENT META STRIP */
+    .event-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+
+    .event-meta-item {
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .meta-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--card); border: 1px solid var(--border-strong);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+
+    .meta-text { line-height: 1.3; }
+    .meta-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
+    .meta-value { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+
+    .hero-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; font-size: 0.92rem; font-weight: 600;
+      border-radius: var(--radius); cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      border: none; font-family: 'Inter', sans-serif; text-decoration: none;
+    }
+
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-ghost   { background: transparent; border: 1px solid var(--border-strong); color: var(--text2); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.25); color: var(--text); }
+    .btn-gold    { background: var(--gold); color: #1a0e00; }
+    .btn-green   { background: #16a34a; color: #fff; }
+    .btn-outlook { background: #0078D4; color: #fff; }
+    .btn-ics     { background: transparent; border: 1px solid var(--border-strong); color: var(--text2); }
+
+    .spots-note {
+      font-size: 0.82rem; color: var(--muted);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    .spots-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+    }
+
+    /* COUNTDOWN */
+    .countdown-wrap {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 24px 20px; margin-top: 32px;
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
+    }
+
+    .countdown-segments { display: flex; justify-content: center; gap: 12px; }
+
+    .cd-seg { text-align: center; }
+
+    .cd-num {
+      font-size: 2.2rem; font-weight: 800; letter-spacing: -0.04em;
+      color: var(--blue); line-height: 1; display: block; font-variant-numeric: tabular-nums;
+    }
+
+    .cd-unit {
+      font-size: 0.62rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted); font-weight: 700; margin-top: 4px; display: block;
+    }
+
+    .cd-sep { font-size: 2rem; color: var(--border-strong); align-self: flex-start; padding-top: 4px; }
+
+    /* REGISTER CARD (right column) */
+    .reg-card {
+      background: var(--card); border: 1px solid var(--border-strong);
+      border-radius: 10px; padding: 32px 28px;
+      position: sticky; top: 84px;
+    }
+
+    .reg-card-title {
+      font-size: 1.1rem; font-weight: 800; margin-bottom: 4px;
+    }
+
+    .reg-card-sub {
+      font-size: 0.82rem; color: var(--muted); margin-bottom: 24px;
+    }
+
+    /* FORM */
+    .form-field { margin-bottom: 16px; }
+
+    .form-field label {
+      display: block; font-size: 0.78rem; font-weight: 600;
+      color: var(--text2); margin-bottom: 6px; letter-spacing: 0.02em;
+    }
+
+    .form-field label .req { color: var(--blue); margin-left: 2px; }
+
+    .form-field input {
+      width: 100%; padding: 11px 14px;
+      background: var(--bg2); border: 1px solid var(--border-strong);
+      border-radius: var(--radius); color: var(--text);
+      font-family: 'Inter', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-field input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(75,107,251,0.12);
+    }
+
+    .form-field input::placeholder { color: var(--muted); }
+
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: var(--blue); color: #fff;
+      border: none; border-radius: var(--radius);
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700;
+      cursor: pointer; transition: opacity 0.2s, transform 0.15s;
+      margin-top: 4px;
+    }
+
+    .form-submit:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .form-note {
+      font-size: 0.72rem; color: var(--muted); text-align: center;
+      margin-top: 12px; line-height: 1.5;
+    }
+
+    .form-error {
+      background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25);
+      border-radius: 4px; padding: 10px 14px;
+      font-size: 0.82rem; color: #FCA5A5;
+      margin-bottom: 14px; display: none;
+    }
+
+    /* SUCCESS STATE */
+    .success-state { display: none; text-align: center; padding: 8px 0; }
+
+    .success-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin: 0 auto 16px;
+    }
+
+    .success-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+
+    .success-sub {
+      font-size: 0.88rem; color: var(--text2); margin-bottom: 24px; line-height: 1.6;
+    }
+
+    .calendar-label {
+      font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+    }
+
+    .calendar-buttons { display: flex; flex-direction: column; gap: 10px; }
+
+    .cal-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 12px 16px; border-radius: var(--radius);
+      font-size: 0.88rem; font-weight: 600;
+      cursor: pointer; transition: opacity 0.2s; border: none;
+      font-family: 'Inter', sans-serif; text-decoration: none; width: 100%;
+    }
+
+    .cal-btn:hover { opacity: 0.88; }
+    .cal-btn-google  { background: #fff; color: #1a1a1a; }
+    .cal-btn-outlook { background: #0078D4; color: #fff; }
+    .cal-btn-ics     { background: var(--bg2); border: 1px solid var(--border-strong); color: var(--text2); }
+
+    .cal-btn-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* SECTIONS */
+    section { padding: 80px 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    .section-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 16px; display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800;
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1rem; color: var(--text2); line-height: 1.75; max-width: 600px;
+    }
+
+    /* TAKEAWAYS */
+    .takeaways-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px;
+    }
+
+    .takeaway-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 24px 22px;
+      transition: border-color 0.2s;
+    }
+
+    .takeaway-card:hover { border-color: var(--border-strong); }
+
+    .takeaway-icon {
+      font-size: 1.4rem; margin-bottom: 14px; display: block;
+    }
+
+    .takeaway-card h3 {
+      font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text);
+    }
+
+    .takeaway-card p {
+      font-size: 0.85rem; color: var(--muted); line-height: 1.65;
+    }
+
+    /* AGENDA */
+    .agenda { margin-top: 40px; }
+
+    .agenda-item {
+      display: flex; gap: 20px; padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .agenda-item:last-child { border-bottom: none; }
+
+    .agenda-time {
+      font-size: 0.78rem; font-weight: 700; color: var(--blue);
+      font-variant-numeric: tabular-nums; min-width: 80px; padding-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .agenda-body h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .agenda-body p  { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* WHO IS IT FOR */
+    .audience-list { margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+
+    .audience-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 16px 18px;
+    }
+
+    .audience-tick {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; color: #4ADE80; flex-shrink: 0; margin-top: 1px;
+    }
+
+    .audience-item p { font-size: 0.92rem; color: var(--text2); line-height: 1.55; }
+    .audience-item p strong { color: var(--text); }
+
+    /* HOST */
+    .host-card {
+      display: flex; gap: 24px; align-items: flex-start;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 28px 28px; margin-top: 32px;
+    }
+
+    .host-avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--blue-dim); border: 1px solid rgba(75,107,251,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; flex-shrink: 0;
+    }
+
+    .host-name   { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
+    .host-title  { font-size: 0.8rem; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+    .host-bio    { font-size: 0.88rem; color: var(--text2); line-height: 1.7; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 36px 0; }
+
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.85rem; color: var(--muted);
+    }
+
+    .footer-left { display: flex; align-items: center; gap: 8px; }
+    .footer-right a { color: var(--blue); }
+    .footer-right a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .reg-card { position: static; margin-top: 40px; }
+      .takeaways-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .container, .narrow { padding: 0 20px; }
+      .hero { padding-top: 96px; padding-bottom: 56px; }
+      .event-meta { gap: 16px; }
+      .countdown-segments { gap: 8px; }
+      .cd-num { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://academy.humantothepowerofai.com" class="nav-logo">
+      <img src="https://academy.humantothepowerofai.com/logo.png"
+           alt="Human to the Power of AI" class="nav-logo-img"
+           onerror="this.outerHTML='<span style=\'font-weight:800;font-size:1rem;color:#fff\'>H²AI</span>'" />
+      <span class="nav-logo-text">Human to the<br/>Power of AI</span>
+    </a>
+    <button class="nav-cta" onclick="document.getElementById('reg-form-wrap').scrollIntoView({behavior:'smooth'})">
+      Reserve My Spot →
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- LEFT: copy -->
+        <div>
+          <div class="hero-badges">
+            <span class="badge badge-free">✦ Free Event</span>
+            <span class="badge badge-live">● Live on Zoom</span>
+            <span class="badge badge-zoom">60 min + Q&amp;A</span>
+          </div>
+
+          <h1>How to Adapt to<br/><span>Google's Agentic AI</span><br/>Search: A Brand Playbook</h1>
+
+          <p class="hero-desc">
+            Google rebuilt search around AI that answers, shortlists, and even buys before a customer ever clicks. Rankings no longer win the customer — <strong>citations do.</strong> This free session shows SEO and digital marketers how to get your brand cited by Google's AI instead of buried beneath it.
+          </p>
+
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <div class="meta-icon">📅</div>
+              <div class="meta-text">
+                <div class="meta-label">Date</div>
+                <div class="meta-value">Friday, 10 July 2026</div>
+              </div>
+            </div>
+            <div class="event-meta-item">
+              <div class="meta-icon">🕖</div>
+              <div class="meta-text">
+                <div class="meta-label">Time</div>
+                <div class="meta-value">7:00 PM – 8:30 PM IST</div>
+              </div>
+            </div>
+            <div class="event-meta-item">
+              <div class="meta-icon">💻</div>
+              <div class="meta-text">
+                <div class="meta-label">Platform</div>
+                <div class="meta-value">Zoom (link via email)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-cta-row">
+            <button class="btn btn-primary"
+              onclick="document.getElementById('reg-form-wrap').scrollIntoView({behavior:'smooth'})">
+              Reserve My Free Spot →
+            </button>
+            <span class="spots-note"><span class="spots-dot"></span> Limited spots — register early</span>
+          </div>
+
+          <!-- countdown -->
+          <div class="countdown-wrap">
+            <div class="countdown-label">⚡ Event Starts In</div>
+            <div class="countdown-segments">
+              <div class="cd-seg"><span class="cd-num" id="cd-days">--</span><span class="cd-unit">Days</span></div>
+              <div class="cd-sep">:</div>
+              <div class="cd-seg"><span class="cd-num" id="cd-hours">--</span><span class="cd-unit">Hours</span></div>
+              <div class="cd-sep">:</div>
+              <div class="cd-seg"><span class="cd-num" id="cd-mins">--</span><span class="cd-unit">Mins</span></div>
+              <div class="cd-sep">:</div>
+              <div class="cd-seg"><span class="cd-num" id="cd-secs">--</span><span class="cd-unit">Secs</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: registration card -->
+        <div id="reg-form-wrap">
+          <div class="reg-card">
+
+            <!-- FORM STATE -->
+            <div id="form-state">
+              <div class="reg-card-title">Reserve Your Free Spot</div>
+              <div class="reg-card-sub">Takes 30 seconds. Zoom link sent to your email.</div>
+
+              <div class="form-error" id="form-error"></div>
+
+              <form id="reg-form" onsubmit="submitRegistration(event)">
+                <div class="form-field">
+                  <label>Full Name <span class="req">*</span></label>
+                  <input type="text" id="f-name" placeholder="Mohammad H. Rahman" required />
+                </div>
+                <div class="form-field">
+                  <label>Email Address <span class="req">*</span></label>
+                  <input type="email" id="f-email" placeholder="you@company.com" required />
+                </div>
+                <div class="form-field">
+                  <label>Contact Number <span class="req">*</span></label>
+                  <input type="tel" id="f-phone" placeholder="+91 98765 43210" required />
+                </div>
+                <div class="form-field">
+                  <label>Company <span class="req">*</span></label>
+                  <input type="text" id="f-company" placeholder="Your Company Name" required />
+                </div>
+                <div class="form-field">
+                  <label>Company Website</label>
+                  <input type="url" id="f-url" placeholder="https://yourcompany.com" />
+                </div>
+                <div class="form-field">
+                  <label>Designation <span class="req">*</span></label>
+                  <input type="text" id="f-designation" placeholder="e.g. SEO Manager, Growth Lead" required />
+                </div>
+
+                <button type="submit" class="form-submit" id="submit-btn">
+                  Register for Free →
+                </button>
+              </form>
+
+              <p class="form-note">Free event. No credit card. Zoom link sent 24 hrs before the session.</p>
+            </div>
+
+            <!-- SUCCESS STATE -->
+            <div class="success-state" id="success-state">
+              <div class="success-icon">✓</div>
+              <div class="success-title">You're registered!</div>
+              <p class="success-sub">
+                Check your inbox — a confirmation email with your Zoom link is on its way. See you on <strong>10 July at 7 PM IST</strong>.
+              </p>
+
+              <div class="calendar-label">Add to your calendar</div>
+              <div class="calendar-buttons">
+                <a id="cal-google" href="#" target="_blank" class="cal-btn cal-btn-google">
+                  <svg class="cal-btn-icon" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.5 24.5c0-1.4-.1-2.8-.4-4.1H24v7.8h12.1c-.5 2.7-2.1 5-4.5 6.5v5.4h7.2c4.2-3.9 6.7-9.6 6.7-15.6z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.7-5.4l-7.2-5.4c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.7-3.9-12.4-9.1H4.1v5.6C7.8 41.9 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.6H4.1A22 22 0 002 24c0 3.5.8 6.9 2.1 9.8l7.5-5.6z"/><path fill="#EA4335" d="M24 9.5c3.2 0 6 1.1 8.2 3.2l6.1-6.1C34.9 3 29.9 1 24 1 15.4 1 7.8 5.1 4.1 11.8l7.5 5.6c1.7-5.2 6.6-7.9 12.4-7.9z"/></svg>
+                  Add to Google Calendar
+                </a>
+                <a id="cal-outlook" href="#" target="_blank" class="cal-btn cal-btn-outlook">
+                  <svg class="cal-btn-icon" viewBox="0 0 48 48"><rect width="48" height="48" rx="4" fill="#0078D4"/><path fill="#fff" d="M8 14h14v20H8zM15 18v12M24 14l16 4v12l-16 4V14z"/></svg>
+                  Add to Outlook Calendar
+                </a>
+                <button onclick="downloadICS()" class="cal-btn cal-btn-ics">
+                  <svg class="cal-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  Download .ics (Apple / Other)
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL LEAVE WITH -->
+  <section>
+    <div class="container">
+      <span class="section-label">What You'll Leave With</span>
+      <h2 class="section-title">Practical from the first minute.<br/>Do bring a notebook.</h2>
+      <p class="section-sub">
+        This isn't a trends overview. Every minute of the session is tied to something you can action the next morning.
+      </p>
+
+      <div class="takeaways-grid">
+        <div class="takeaway-card">
+          <span class="takeaway-icon">📋</span>
+          <h3>The CITED Playbook Framework</h3>
+          <p>A structured five-step model for positioning your brand as a source AI agents trust, cite, and act through.</p>
+        </div>
+        <div class="takeaway-card">
+          <span class="takeaway-icon">🔍</span>
+          <h3>A Five-Point Audit</h3>
+          <p>Run it the morning after the session. Identify exactly where your current digital footprint is invisible to AI agents.</p>
+        </div>
+        <div class="takeaway-card">
+          <span class="takeaway-icon">📊</span>
+          <h3>Free Brand Citation Tracking</h3>
+          <p>A no-budget method to monitor how often Google's AI, ChatGPT, and Claude name your brand in relevant responses.</p>
+        </div>
+        <div class="takeaway-card">
+          <span class="takeaway-icon">🗓</span>
+          <h3>A 30-Day Action Plan</h3>
+          <p>Zero new budget required. A sequenced roadmap you can begin implementing the week after the session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section>
+    <div class="container">
+      <span class="section-label">Session Agenda</span>
+      <h2 class="section-title">60 Minutes + 15-Minute Live Q&amp;A</h2>
+      <p class="section-sub">Friday, 10 July 2026 · 7:00 PM – 8:30 PM IST · Zoom</p>
+
+      <div class="agenda">
+        <div class="agenda-item">
+          <div class="agenda-time">7:00 PM</div>
+          <div class="agenda-body">
+            <h4>The Shift: From Rankings to Citations</h4>
+            <p>Why Google AI Mode has made the blue-link era obsolete, and what "agentic search" actually means for your traffic, conversions, and brand visibility.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">7:15 PM</div>
+          <div class="agenda-body">
+            <h4>How AI Agents Decide What to Cite</h4>
+            <p>The three signals Google's reasoning engine uses — structured data, entity authority, and E-E-A-T — and how each one works in practice.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">7:35 PM</div>
+          <div class="agenda-body">
+            <h4>The CITED Playbook — Live Walkthrough</h4>
+            <p>A framework-driven walkthrough with real brand examples. Schema architecture, entity graphing, and action-oriented markup explained plainly.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">7:55 PM</div>
+          <div class="agenda-body">
+            <h4>The Five-Point Audit + 30-Day Plan</h4>
+            <p>Run the audit live during the session. Leave with a prioritised checklist and a sequenced action plan for the next 30 days.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">8:15 PM</div>
+          <div class="agenda-body">
+            <h4>Live Q&amp;A</h4>
+            <p>Open floor. Bring your specific website, niche, or campaign challenges. Real answers, not theory.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">8:30 PM</div>
+          <div class="agenda-body">
+            <h4>Session Close</h4>
+            <p>Recordings and resources shared with all registered attendees within 48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IS IT FOR -->
+  <section>
+    <div class="narrow">
+      <span class="section-label">Who Is This For</span>
+      <h2 class="section-title">Built for working marketers,<br/>not passive learners.</h2>
+
+      <div class="audience-list">
+        <div class="audience-item">
+          <div class="audience-tick">✓</div>
+          <p><strong>SEO and content marketers</strong> with 1–5 years of experience who are seeing organic traffic flatten or decline and need to understand why.</p>
+        </div>
+        <div class="audience-item">
+          <div class="audience-tick">✓</div>
+          <p><strong>Digital marketing managers</strong> responsible for brand visibility who need a concrete framework — not just trend awareness.</p>
+        </div>
+        <div class="audience-item">
+          <div class="audience-tick">✓</div>
+          <p><strong>Growth and performance marketers</strong> who want to understand how agentic AI will change their paid and organic channel mix.</p>
+        </div>
+        <div class="audience-item">
+          <div class="audience-tick">✓</div>
+          <p><strong>Brand and content strategists</strong> who need to brief their teams on structured data and AI-first content architecture without getting lost in technical jargon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOST -->
+  <section>
+    <div class="narrow">
+      <span class="section-label">Your Host</span>
+      <h2 class="section-title">Taught live by a practitioner,<br/>not a presenter.</h2>
+
+      <div class="host-card">
+        <div class="host-avatar">MR</div>
+        <div>
+          <div class="host-name">Mohammad H. Rahman</div>
+          <div class="host-title">Founder, Human to the Power of AI · Industry Mentor, Monash Business School</div>
+          <p class="host-bio">
+            With 6+ years mentoring at Monash Business School, UpGrad, and LearnTube, Mohammad has trained 350+ students and marketers on AI-native strategy. He teaches the way practitioners think — concrete, direct, and built around real campaign environments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section style="background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(75,107,251,0.1) 0%, transparent 70%);">
+    <div class="narrow" style="text-align:center;">
+      <span class="section-label" style="justify-content:center;display:flex;">Free. Live. Actionable.</span>
+      <h2 class="section-title" style="margin-bottom:16px;">Join 10 July at 7 PM IST.</h2>
+      <p class="section-sub" style="margin:0 auto 32px;text-align:center;">
+        No slides that go nowhere. No theory without application. Just the frameworks and the audit — ready to use the next morning.
+      </p>
+      <button class="btn btn-primary" style="font-size:1rem;padding:16px 36px;"
+        onclick="document.getElementById('reg-form-wrap').scrollIntoView({behavior:'smooth'})">
+        Reserve My Free Spot →
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="https://academy.humantothepowerofai.com" style="display:inline-flex;align-items:center;gap:8px;">
+            <img src="https://academy.humantothepowerofai.com/logo.png"
+              style="height:26px;width:auto;filter:brightness(0) invert(1);opacity:0.55;"
+              onerror="this.outerHTML='<span style=\'font-weight:700;color:#fff;font-size:0.85rem;\'>H²AI</span>'" />
+          </a>
+          <span style="margin-left:8px;">© 2026 Human to the Power of AI</span>
+        </div>
+        <div class="footer-right">
+          Questions? <a href="mailto:contact@humantothepowerofai.com">contact@humantothepowerofai.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── SUPABASE ──
+    const SUPABASE_URL  = 'https://xlfblvgtsqykyrnduyvn.supabase.co';
+    const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsZmJsdmd0c3F5a3lybmR1eXZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1NDY3MTgsImV4cCI6MjA5MDEyMjcxOH0.GfxMZ0tmMG1LL_A141ATBhmMVQdPl4EJvCmh7g-21mo';
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+    // ── COUNTDOWN ──
+    const EVENT_START = new Date('2026-07-10T13:30:00Z').getTime();
+
+    (function tick() {
+      const diff = EVENT_START - Date.now();
+      function pad(n) { return String(n).padStart(2, '0'); }
+      if (diff <= 0) {
+        ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
+        return;
+      }
+      document.getElementById('cd-days').textContent  = pad(Math.floor(diff / 86400000));
+      document.getElementById('cd-hours').textContent = pad(Math.floor(diff % 86400000 / 3600000));
+      document.getElementById('cd-mins').textContent  = pad(Math.floor(diff % 3600000 / 60000));
+      document.getElementById('cd-secs').textContent  = pad(Math.floor(diff % 60000 / 1000));
+      setTimeout(tick, 1000);
+    })();
+
+    // ── CALENDAR LINKS ──
+    const EVENT_TITLE   = "How to Adapt to Google's Agentic AI Search: A Brand Playbook";
+    const EVENT_DETAILS = "Free 60-minute live session + 15-min Q&A for SEO and digital marketers.\n\nLearn how to get your brand cited by Google's AI instead of buried beneath it.\n\nHosted by Mohammad H. Rahman, Human to the Power of AI.\n\nZoom link will be sent to your registered email address.";
+    const EVENT_LOCATION = "Zoom — link sent via email";
+    const START_UTC = '20260710T133000Z';
+    const END_UTC   = '20260710T150000Z';
+
+    function buildGoogleCalURL() {
+      const p = new URLSearchParams({
+        action:   'TEMPLATE',
+        text:     EVENT_TITLE,
+        dates:    `${START_UTC}/${END_UTC}`,
+        details:  EVENT_DETAILS,
+        location: EVENT_LOCATION,
+      });
+      return `https://calendar.google.com/calendar/render?${p.toString()}`;
+    }
+
+    function buildOutlookURL() {
+      const p = new URLSearchParams({
+        path:     '/calendar/action/compose',
+        rru:      'addevent',
+        subject:  EVENT_TITLE,
+        startdt:  '2026-07-10T13:30:00Z',
+        enddt:    '2026-07-10T15:00:00Z',
+        body:     EVENT_DETAILS,
+        location: EVENT_LOCATION,
+      });
+      return `https://outlook.live.com/calendar/0/deeplink/compose?${p.toString()}`;
+    }
+
+    function downloadICS() {
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Human to the Power of AI//Webinar//EN',
+        'CALSCALE:GREGORIAN',
+        'METHOD:PUBLISH',
+        'BEGIN:VEVENT',
+        `DTSTART:${START_UTC}`,
+        `DTEND:${END_UTC}`,
+        `SUMMARY:${EVENT_TITLE}`,
+        `DESCRIPTION:${EVENT_DETAILS.replace(/\n/g, '\\n')}`,
+        `LOCATION:${EVENT_LOCATION}`,
+        'STATUS:CONFIRMED',
+        'SEQUENCE:0',
+        `UID:h2ai-webinar-20260710@humantothepowerofai.com`,
+        'END:VEVENT',
+        'END:VCALENDAR',
+      ].join('\r\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const url  = URL.createObjectURL(blob);
+      const a    = Object.assign(document.createElement('a'), { href: url, download: 'h2ai-webinar-july-10.ics' });
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // ── FORM SUBMISSION ──
+    async function submitRegistration(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const errEl = document.getElementById('form-error');
+      errEl.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Registering…';
+
+      const payload = {
+        full_name:      document.getElementById('f-name').value.trim(),
+        email:          document.getElementById('f-email').value.trim().toLowerCase(),
+        contact_number: document.getElementById('f-phone').value.trim(),
+        company:        document.getElementById('f-company').value.trim(),
+        company_url:    document.getElementById('f-url').value.trim() || null,
+        designation:    document.getElementById('f-designation').value.trim(),
+      };
+
+      const { error } = await sb
+        .from('AI_search_registrations')
+        .insert([payload]);
+
+      if (error) {
+        errEl.textContent = 'Something went wrong. Please try again or email contact@humantothepowerofai.com.';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Register for Free →';
+        return;
+      }
+
+      // Track registration with Meta Pixel
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+
+      // Wire up calendar links
+      document.getElementById('cal-google').href  = buildGoogleCalURL();
+      document.getElementById('cal-outlook').href = buildOutlookURL();
+
+      // Swap form → success
+      document.getElementById('form-state').style.display   = 'none';
+      document.getElementById('success-state').style.display = 'block';
+
+      // Scroll to confirm on mobile
+      document.getElementById('reg-form-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+</body>
+</html>

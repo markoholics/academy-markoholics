@@ -21,6 +21,8 @@
     { "src": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/",  "dest": "/blog/how-to-adapt-to-googles-agentic-ai-search-brand-playbook/index.html" },
     { "src": "/blog",     "dest": "/blog/index.html" },
     { "src": "/blog/",    "dest": "/blog/index.html" },
+    { "src": "/event",    "dest": "/event/index.html" },
+    { "src": "/event/",   "dest": "/event/index.html" },
     { "src": "/photo.jpg",  "dest": "/photo.jpg" },
     { "src": "/photo.jpeg", "dest": "/photo.jpeg" },
     { "src": "/logo.png",       "dest": "/logo.png" },
