@@ -2,9 +2,9 @@ const { createClient } = require('@supabase/supabase-js');
 
 const SUPABASE_URL  = 'https://xlfblvgtsqykyrnduyvn.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsZmJsdmd0c3F5a3lybmR1eXZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1NDY3MTgsImV4cCI6MjA5MDEyMjcxOH0.GfxMZ0tmMG1LL_A141ATBhmMVQdPl4EJvCmh7g-21mo';
-const RESEND_KEY    = 're_J7dsQiBD_7NcZYSnDWz18vqyfyUMyBnDw';
+const RESEND_KEY    = process.env.RESEND_KEY;
 const ZOOM_LINK     = 'https://us05web.zoom.us/j/87572164783?pwd=flHB3D3m07WDHavMuobOzV4pfnsq9g.1';
-const FROM_EMAIL    = 'Human to the Power of AI <contact@humantothepowerofai.com>';
+const FROM_EMAIL    = 'Markoholics <contact@humantothepowerofai.com>';
 
 function buildEmail(full_name) {
   return `<!DOCTYPE html>
@@ -75,7 +75,7 @@ function buildEmail(full_name) {
                         <td style="padding:12px 0 5px;">
                           <p style="margin:0;font-size:12px;color:#6E6E88;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;">Host</p>
                           <p style="margin:3px 0 0;font-size:15px;color:#ffffff;font-weight:700;">Mohammad H. Rahman</p>
-                          <p style="margin:2px 0 0;font-size:14px;color:#C8C8D8;">Founder, Human to the Power of AI</p>
+                          <p style="margin:2px 0 0;font-size:14px;color:#C8C8D8;">Founder, Markoholics</p>
                         </td>
                       </tr>
                     </table>
@@ -186,7 +186,7 @@ function buildEmail(full_name) {
           <tr>
             <td style="padding:32px 40px 36px;border-top:1px solid rgba(255,255,255,0.07);margin-top:28px;">
               <p style="margin:0;font-size:13px;line-height:1.7;color:#6E6E88;">
-                Hosted by <span style="color:#C8C8D8;font-weight:700;">Mohammad H. Rahman</span> · Human to the Power of AI<br>
+                Hosted by <span style="color:#C8C8D8;font-weight:700;">Mohammad H. Rahman</span> · Markoholics<br>
                 Questions? Reply to this email or write to <a href="mailto:contact@humantothepowerofai.com" style="color:#4B6BFB;text-decoration:none;">contact@humantothepowerofai.com</a>
               </p>
               <p style="margin:16px 0 0;font-size:11px;color:#3A3A55;">

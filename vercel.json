@@ -5,7 +5,9 @@
     { "src": "**/*.html",      "use": "@vercel/static" },
     { "src": "**/*.png",       "use": "@vercel/static" },
     { "src": "**/*.jpg",       "use": "@vercel/static" },
-    { "src": "**/*.jpeg",      "use": "@vercel/static" }
+    { "src": "**/*.jpeg",      "use": "@vercel/static" },
+    { "src": "**/*.ico",       "use": "@vercel/static" },
+    { "src": "**/*.svg",       "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1.js" },
@@ -27,6 +29,11 @@
     { "src": "/photo.jpeg",    "dest": "/photo.jpeg" },
     { "src": "/logo.png",      "dest": "/logo.png" },
     { "src": "/og-image.png",  "dest": "/og-image.png" },
+    { "src": "/favicon.ico",         "dest": "/favicon.ico" },
+    { "src": "/favicon.svg",         "dest": "/favicon.svg" },
+    { "src": "/favicon-16x16.png",   "dest": "/favicon-16x16.png" },
+    { "src": "/favicon-32x32.png",   "dest": "/favicon-32x32.png" },
+    { "src": "/apple-touch-icon.png","dest": "/apple-touch-icon.png" },
     { "src": "/privacy-policy",  "dest": "/privacy-policy/index.html" },
     { "src": "/privacy-policy/", "dest": "/privacy-policy/index.html" },
     { "src": "/terms",           "dest": "/terms/index.html" },
